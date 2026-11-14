@@ -1,0 +1,51 @@
+name: Build Windows EXE
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build-windows-exe:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: "17"
+          distribution: "temurin"
+
+      - name: Set up Gradle 9.3.1
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "9.3.1"
+
+      - name: Run Desktop Unit Tests
+        working-directory: windows-desktop
+        run: gradle test
+
+      - name: Package Windows EXE Installer
+        working-directory: windows-desktop
+        run: gradle packageExe
+
+      - name: Package Standalone Windows Image
+        working-directory: windows-desktop
+        run: gradle createDistributable
+
+      - name: Zip Portable Windows Folder
+        shell: pwsh
+        run: |
+          if (Test-Path "windows-desktop/build/compose/binaries/main/app/CutterPro") {
+            Compress-Archive -Path "windows-desktop/build/compose/binaries/main/app/CutterPro/*" -DestinationPath "CutterPro-Windows-Portable.zip" -Force
+          }
+
+      - name: Upload Windows EXE & Portable ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: CutterPro-Windows-EXE
+          path: |
+            windows-desktop/build/compose/binaries/main/exe/*.exe
+            CutterPro-Windows-Portable.zip
