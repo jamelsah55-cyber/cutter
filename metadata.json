@@ -1,0 +1,6 @@
+{
+  "name": "كتر برو",
+  "description": "تطبيق تصميم متجهات وربط ماكينات الكتر والقص عبر منفذ USB OTG مع تحويل النصوص العربية إلى مسارات قص وإرسال أوامر HPGL وGPGL وGRBL.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">كتر برو</string>
+    <string name="nav_studio">التصميم</string>
+    <string name="nav_machine">القص و OTG</string>
+    <string name="nav_library">المكتبة والإعدادات</string>
+
+    <string name="studio_title">استوديو التصميم</string>
+    <string name="add_text">نص عربي / إنجليزي</string>
+    <string name="add_shape">الأشكال</string>
+    <string name="import_svg">استيراد SVG / PLT</string>
+    <string name="weeding_box">إطار التفريغ</string>
+    <string name="mirror_htv">عكس حراري</string>
+    <string name="snap_grid">تثبيت الشبكة</string>
+
+    <string name="otg_title">ربط الماكينة عبر OTG</string>
+    <string name="otg_scan">فحص منافذ USB</string>
+    <string name="otg_connect">اتصال</string>
+    <string name="otg_disconnect">قطع الاتصال</string>
+    <string name="start_cut">بدء القص الفعلي</string>
+    <string name="dry_run">معاينة المسار</string>
+    <string name="emergency_stop">إيقاف طارئ</string>
+    <string name="export_file">تصدير ملف القص</string>
+</resources>

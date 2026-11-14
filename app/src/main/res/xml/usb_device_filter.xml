@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <usb-device vendor-id="1027" /> <!-- FTDI (0x0403) -->
+    <usb-device vendor-id="6790" /> <!-- QinHeng CH340/CH341 (0x1A86) -->
+    <usb-device vendor-id="4292" /> <!-- Silicon Labs CP210x (0x10C4) -->
+    <usb-device vendor-id="1659" /> <!-- Prolific PL2303 (0x067B) -->
+    <usb-device vendor-id="9025" /> <!-- Arduino / GRBL (0x2341) -->
+    <usb-device vendor-id="5824" /> <!-- Teensy / CDC (0x16C0) -->
+    <usb-device vendor-id="2893" /> <!-- Roland (0x0B4D) -->
+    <usb-device vendor-id="2894" /> <!-- Graphtec (0x0B4E) -->
+    <usb-device vendor-id="2895" /> <!-- Mimaki (0x0B4F) -->
+    <usb-device vendor-id="2903" /> <!-- Silhouette (0x0B57) -->
+    <usb-device vendor-id="1240" /> <!-- Microchip CDC (0x04D8) -->
+    <!-- Standard USB CDC-ACM (Communications & CDC Data classes) -->
+    <usb-device class="2" />
+    <usb-device class="10" />
+</resources>
